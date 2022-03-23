@@ -1,4 +1,4 @@
 Chapter 8 question 2:
 I think it errors because it is a computed value, and the program may try to access it before the program has 
 had a chance to do the math and retrieve the answer. I think that it can be safely ignored because the program 
-will display the total after the quantity has been entered.. 
+will display the total after the quantity has been entered.
