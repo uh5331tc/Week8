@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
     <head>
-        <script src="https://unpkg.com/vue@next"></script>
+        <script src="https://unpkg.com/vue@next"></script> 
     </head>
 
     <body>
@@ -10,11 +10,11 @@
             <!-- insert all the page that vue iwlil manage will go here-->
             <h1>Hello Vue!</h1>
 
-            <p>Original Message: {{ message }}</p>
-            <p>Added Exclamation Points: {{ messageWithExclamationPoints }}</p>
+            <p>Original Message: {{ message }}</p>  <!--Message will display here-->
+            <p>Added Exclamation Points: {{ messageWithExclamationPoints }}</p>  <!--altered message will display here-->
 
-            <button v-on:click="addExclamation">Add !</button>
-            <button v-on:click="clear">Clear</button>
+            <button v-on:click="addExclamation">Add !</button>  <!--Button to add-->
+            <button v-on:click="clear">Clear</button> <!--button to clear-->
         </div>
 
         <script>
@@ -28,7 +28,7 @@
 
                     }
                 }, 
-                methods: {
+                methods: { //methods
                     addExclamation() {
                         if (this.exclamationPoints < this.maxExclamationPoints){
                             this.exclamationPoints++

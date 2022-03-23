@@ -12,8 +12,8 @@
             <input v-model="name" id="name">
 
             <p v-if="name.length > 2">  <!--validating 2+ characters-->
-            Your name is {{ name }}
-            <button v-on:click="clear">Clear Input</button>
+            Your name is {{ name }}  <!--Name will be genereated for this -->
+            <button v-on:click="clear">Clear Input</button> <!--clear input button-->
             </p> 
                 <!--v-else must go right after v-if !!!-->
             <p v-else>
@@ -28,8 +28,8 @@
                         name: '' // empty string
                     }
                 },
-                methods: {
-                    clear() {
+                methods: {  // clear text 
+                    clear() { 
                         this.name = ''
                     }
                 }

@@ -7,8 +7,8 @@
     <body>
 
         <div id="app">
-            <table>
-                <tr>
+            <table>  <!--creating a table -->
+                <tr>  
                     <th>Item</th>
                     <th>Unit Price</th>
                     <th>Quantity</th>
@@ -18,10 +18,10 @@
                 <tr>
                     <td>{{ name }}</td>
                     <td>{{ unitPrice }}</td>
-                    <td>
+                    <td> <!-- creating a space for user input -->
                         <input type="number" v-model="quantity">
                     </td> 
-                    <td>${{ total }}</td>
+                    <td>${{ total }}</td>  <!-- computed value will go here-->
 
 
                 </tr>
@@ -32,7 +32,7 @@
             let app = Vue.createApp({
                 data() {
                     return {
-                        name: 'Hat',
+                        name: 'Hat', // exapmle data
                         quantity: 1,
                         unitPrice: 4.99,
                     }
@@ -40,7 +40,7 @@
                 computed: {
                     total() {
                         let totalPrice = this.quantity * this.unitPrice
-                        let formattedPrice = totalPrice.toFixed(2)
+                        let formattedPrice = totalPrice.toFixed(2) //.00 decimal places
                         return formattedPrice
                     }
                 }

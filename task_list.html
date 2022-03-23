@@ -5,14 +5,14 @@
     </head>
 
     <body>
-        <h1>Hello Vue Loops</h1>
+        <h1>Hello Vue Loops</h1>  
        
         <div id="app">
             <label for="task">Please enter your to do task:</label>
             <input id="task" v-model="newTask">
-            <button v-on:click="addTask">Add Task</button>
+            <button v-on:click="addTask">Add Task</button>  <!--add task button-->
                 <ul>
-                    <li v-for="task in taskList">{{ task }}</li> 
+                    <li v-for="task in taskList">{{ task }}</li>  <!-- task will be input here-->
                 </ul>
         </div>
 
@@ -25,7 +25,7 @@
                         taskList: [] 
                     }
                 }, 
-                methods: {
+                methods: { // methods
                     addTask() {
                         this.taskList.push(this.newTask)
                         this.newTask = ''
